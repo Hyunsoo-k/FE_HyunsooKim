@@ -1,6 +1,6 @@
 import styles from "./index.module.css";
 
-const DropdownMenu = () => {
+const Dropdown = () => {
   return (
     <div className={styles["wrapper"]}>
       <p className={styles["menu-list"]}>Home</p>
@@ -11,4 +11,4 @@ const DropdownMenu = () => {
   );
 };
 
-export default DropdownMenu;
+export default Dropdown;
