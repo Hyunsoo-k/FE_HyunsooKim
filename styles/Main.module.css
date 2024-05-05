@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Niconne&family=Playball&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.section__mainImg {
+  position: relative;
+  height: 350px;
+  background-image: url("/images/mainImg.gif");
+  background-size: cover;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  filter: brightness(70%);
+}
+
+.section__mainImg:hover {
+  animation-name: homeImage_hover_animation;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes homeImage_hover_animation {
+  0% {
+    filter: brightness(70%);
+  }
+
+  100% {
+    filter: brightness(50%);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .section {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+
+  .section__mainImg {
+    width: 40%;
+    height: 700px;
+    border-radius: 20px;
+    margin-left: 20px;
+  }
+
+  .section__content {
+    width: 55%;
+    margin-right: 20px;
+  }
+}
