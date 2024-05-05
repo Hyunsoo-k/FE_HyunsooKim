@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import { Article } from "@/types/main";
-import Image from "next/image";
-
+import Home from "@/components/home";
 import styles from "@/styles/Main.module.css";
 
 const Main = () => {
@@ -12,7 +11,9 @@ const Main = () => {
     <div className={styles["wrapper"]}>
       <div className={styles["section"]}>
         <div className={styles["section__mainImg"]}></div>
-        <div className={styles["section__content"]}></div>
+        <div className={styles["section__content"]}>
+          <Home />
+        </div>
       </div>
     </div>
   );

@@ -24,12 +24,12 @@
 }
 
 .section__mainImg:hover {
-  animation-name: homeImage_hover_animation;
+  animation-name: section__mainImg_hover_animation;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
 }
 
-@keyframes homeImage_hover_animation {
+@keyframes section__mainImg_hover_animation {
   0% {
     filter: brightness(70%);
   }
