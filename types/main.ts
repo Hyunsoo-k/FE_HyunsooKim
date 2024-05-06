@@ -1,3 +1,3 @@
-type Article = "Home" | "AboutMe" | "Skill" | "Project";
+type Article = "Home" | "About" | "Skills" | "Project";
 
 export type { Article };
