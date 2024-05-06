@@ -4,6 +4,7 @@ import { Article } from "@/types/main";
 import Header from "@/components/header";
 import Home from "@/components/home";
 import About from "@/components/about";
+import Skills from "@/components/skiils";
 import Footer from "@/components/footer";
 import styles from "@/styles/Main.module.css";
 
@@ -20,8 +21,9 @@ const Main = () => {
             <Home />
           ) : article === "About" ? (
             <About />
-          )
-           : undefined}
+          ) : article === "Skills" ? (
+            <Skills />
+          ) : undefined}
         </div>
       </div>
       <Footer />
