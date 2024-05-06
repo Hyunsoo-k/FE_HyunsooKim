@@ -5,4 +5,11 @@ interface HeaderProps {
   setArticle: React.Dispatch<SetStateAction<Article>>;
 }
 
-export type { HeaderProps };
+type Viewport = "" | "mobile" | "not mobile";
+
+interface DropdownState {
+  initialState: boolean;
+  open: boolean;
+}
+
+export type { HeaderProps, Viewport, DropdownState };
