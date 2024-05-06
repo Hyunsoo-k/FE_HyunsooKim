@@ -4,6 +4,7 @@ import { Article } from "@/types/main";
 import Header from "@/components/header";
 import Home from "@/components/home";
 import About from "@/components/about";
+import Footer from "@/components/footer";
 import styles from "@/styles/Main.module.css";
 
 const Main = () => {
@@ -23,6 +24,7 @@ const Main = () => {
            : undefined}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
