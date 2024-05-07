@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jua&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.wrapper {
+  padding: 0 15px;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.project__content {
+  position: relative;
+}
+
+.project__content:hover {
+  cursor: pointer;
+  animation-name: project__content_animation;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes project__content_animation {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -10px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    width: auto;
+  }
+
+  .project {
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr;
+    place-items: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .wrapper {
+    width: auto;
+    padding: 0;
+  }
+
+  .project {
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr;
+    grid-gap: 20px 50px;
+  }
+}
