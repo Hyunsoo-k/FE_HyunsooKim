@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.blog {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 300px;
+}
+
+.blog__title {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 35px;
+  font-family: "Jua", sans-serif;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  animation-name: content_animation;
+  animation-direction: alternate;
+  animation-duration: 25s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.content:hover {
+  animation-play-state: paused;
+}
+
+@keyframes content_animation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-160%);
+  }
+}
+
+.etc {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin: 0 12px;
+}
+
+.linkTree {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 250px;
+  height: 300px;
+}
+
+.linkTree__title {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 35px;
+  font-family: "Jua", sans-serif;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.linkTree__link {
+  display: block;
+  position: relative;
+  width: 250px;
+  height: 200px;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.linkTree__link:hover {
+  cursor: pointer;
+  animation-name: linkTree__link_animation;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes linkTree__link_animation {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -10px;
+  }
+}
+
+.gitHub {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 300px;
+}
+
+.gitHub__title {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 35px;
+  font-family: "Jua", sans-serif;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.github__link {
+  display: block;
+  position: relative;
+  width: 250px;
+  height: 200px;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.github__link:hover {
+  cursor: pointer;
+  animation-name: gitHub_image_animation;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes gitHub_image_animation {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -10px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .wrapper {
+    height: 700px;
+  }
+
+  .blog__title {
+    text-align: start;
+  }
+
+  .etc {
+    justify-content: start;
+    gap: 53px;
+    margin: 0;
+  }
+
+  .linkTree__title {
+    text-align: start;
+  }
+
+  .gitHub__title {
+    text-align: start;
+  }
+}

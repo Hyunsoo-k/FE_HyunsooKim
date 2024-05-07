@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Niconne&family=Playball&display=swap");
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+.mainText {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  text-align: center;
+}
+
+.mainText__text {
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  animation-name: mainText__text_animation;
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
+}
+
+.mainText__blink {
+  display: inline-block;
+  width: 5px;
+  height: 40px;
+  background-color: #2b2929;
+  animation-name: mainText__blink_animation;
+  animation-duration: 0.7s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: backwards;
+}
+
+@keyframes mainText__blink_animation {
+  0% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 0.5;
+  }
+  66% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.subText {
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 0px;
+  font-size: 27px;
+  font-weight: 600;
+  font-family: "Montserrat Alternates", sans-serif;
+  text-align: end;
+  color: #0e385f;;
+  opacity: 0;
+  animation-name: subText_animation;
+  animation-duration: 1.5s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes subText_animation {
+  0% {
+    top: -10px;
+    opacity: 0;
+  }
+
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    height: 500px;
+  }
+
+  .mainText__text {
+    font-size: 65px;
+  }
+
+  .mainText__blink {
+    height: 65px;
+  }
+
+  .subText {
+    font-size: 32px
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .wrapper {
+    height: 700px;
+  }
+
+  .mainText__text {
+    font-size: 75px;
+  }
+
+  .mainText__blink {
+    height: 75px;
+    margin-left: 10px;
+  }
+}
+
