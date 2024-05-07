@@ -5,6 +5,7 @@ import Header from "@/components/header";
 import Home from "@/components/home";
 import About from "@/components/about";
 import Skills from "@/components/skiils";
+import Project from "@/components/project"
 import Footer from "@/components/footer";
 import styles from "@/styles/Main.module.css";
 
@@ -23,6 +24,8 @@ const Main = () => {
             <About />
           ) : article === "Skills" ? (
             <Skills />
+          ) : article === "Project" ? (
+            <Project />
           ) : undefined}
         </div>
       </div>
