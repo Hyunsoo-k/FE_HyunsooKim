@@ -39,7 +39,7 @@ const Header = ({ setArticle }: HeaderProps) => {
           <div className={styles["title__logo"]}>
             <Image src="/images/header/gear.gif" alt="logo" fill />
           </div>
-          <h1 className={styles["title__text"]}>HS.K's</h1>
+          <h1 className={styles["title__text"]}>HS.K&apos;s</h1>
         </div>
         {viewport === "mobile" ? (
           <div onClick={handleDropdownClick}>
