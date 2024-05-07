@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styles from "./Index.module.css";
+import styles from "./index.module.css";
 
 const Home = () => {
   const myName = "Hyunsoo_Kim"; //length: 11
