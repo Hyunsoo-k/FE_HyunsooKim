@@ -6,6 +6,7 @@ const Dropdown = ({ setArticle }: DropdownProps) => {
   const handleSwitchArticle = (article: Article) => {
     setArticle(article);
   };
+
   return (
     <div className={styles["wrapper"]}>
       <p onClick={() => {handleSwitchArticle("Home");}} className={styles["menu-list"]}>
@@ -13,7 +14,7 @@ const Dropdown = ({ setArticle }: DropdownProps) => {
       </p>
       <p
         onClick={() => {
-          handleSwitchArticle("Home");
+          handleSwitchArticle("About");
         }}
         className={styles["menu-list"]}
       >
@@ -21,7 +22,7 @@ const Dropdown = ({ setArticle }: DropdownProps) => {
       </p>
       <p
         onClick={() => {
-          handleSwitchArticle("Home");
+          handleSwitchArticle("Skills");
         }}
         className={styles["menu-list"]}
       >
@@ -29,7 +30,7 @@ const Dropdown = ({ setArticle }: DropdownProps) => {
       </p>
       <p
         onClick={() => {
-          handleSwitchArticle("Home");
+          handleSwitchArticle("Project");
         }}
         className={styles["menu-list"]}
       >
