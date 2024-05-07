@@ -4,19 +4,28 @@ import styles from "./Index.module.css";
 const Home = () => {
   const myName = "Hyunsoo_Kim"; //length: 11
   const [mainText, setMainText] = useState<string>("");
+  const [count, setCount] = useState<number>(0);
 
   useEffect(() => {
-    let index = 0;
-    const intervalId = setInterval(() => {
-      if (myName.length > index) {
-        setMainText((prevText: string) => prevText + myName[index]);
-        index++;
-        index === 10 && clearInterval(intervalId);
-      }
-    }, 90);
+    if (count < 11) {
+      const typingInterval = setInterval(() => {
+        setMainText((prev: string) => {
+          let result = prev ? prev + myName[count] : myName[0];
+          setCount(count + 1);
 
-    return () => clearInterval(intervalId);
-  }, []);
+          if (count === 10) {
+            clearInterval(typingInterval);
+          }
+
+          return result;
+        });
+      }, 90);
+
+      return () => {
+        clearInterval(typingInterval);
+      };
+    }
+  });
 
   return (
     <div className={styles["wrapper"]}>
