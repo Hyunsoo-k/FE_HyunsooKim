@@ -12,7 +12,6 @@ const Home = () => {
         setMainText((prev: string) => {
           let result = prev ? prev + myName[count] : myName[0];
           setCount(count + 1);
-
           if (count === 10) {
             clearInterval(typingInterval);
           }

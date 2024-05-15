@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { CiMenuBurger } from "react-icons/ci";
 
@@ -15,6 +15,8 @@ const Header = ({ setArticle }: HeaderProps) => {
     open: false,
   });
 
+  const dropdownRef = useRef<any>(null);
+
   const handleSwitchArticle = (article: Article) => {
     setArticle(article);
   };
@@ -28,9 +30,18 @@ const Header = ({ setArticle }: HeaderProps) => {
       window.innerWidth < 768 ? setViewport("mobile") : setViewport("not mobile");
     };
 
+    const handleOutsideClick = (e: any) => {
+      if (dropdownState.open && dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setDropdownState((prev: DropdownState) => ({ ...prev, open: false }));
+        console.log("handleOustsideClick done.")
+      }
+      console.log(dropdownState.open);
+    };
+
     window.addEventListener("resize", handleResizing);
+    window.addEventListener("click", handleOutsideClick);
     handleResizing();
-  }, []);
+  }, [dropdownState]);
 
   return (
     <>
@@ -39,7 +50,7 @@ const Header = ({ setArticle }: HeaderProps) => {
           <div className={styles["title__logo"]}>
             <Image src="/images/header/gear.gif" alt="logo" fill />
           </div>
-          <h1 className={styles["title__text"]}>HS.K&apos;s</h1>
+          <h1 onClick={() => {setArticle("Home")}} className={styles["title__text"]}>HS.K&apos;s</h1>
         </div>
         {viewport === "mobile" ? (
           <div onClick={handleDropdownClick}>
@@ -63,6 +74,7 @@ const Header = ({ setArticle }: HeaderProps) => {
         )}
       </div>
       <div
+        ref={dropdownRef}
         className={
           dropdownState.initialState
             ? styles["dropdown-default"]
