@@ -22,7 +22,7 @@ const Header = ({ setArticle }: HeaderProps) => {
   };
 
   const handleDropdownClick = (e: React.MouseEvent) => {
-    e.stopPropagation(); // 이벤트 전파 방지
+    e.stopPropagation();
     setDropdownState((prev: DropdownState) => ({
       ...prev,
       initialState: false,
@@ -48,7 +48,7 @@ const Header = ({ setArticle }: HeaderProps) => {
     window.addEventListener("resize", handleResizing);
     window.addEventListener("click", handleOutsideClick);
 
-    handleResizing(); // 초기 실행
+    handleResizing();
 
     return () => {
       window.removeEventListener("resize", handleResizing);
